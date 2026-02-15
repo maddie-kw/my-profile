@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maddie Kwarteng - Medical Student</title>
+    <title>Maddie</title>
     <style>
         * {
             margin: 0;
@@ -12,350 +12,345 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #fafafa;
-            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #6b5d7a;
+            background: linear-gradient(135deg, #fdfbff 0%, #f9f6fc 100%);
+            padding: 0;
+            position: relative;
         }
 
-        .accent-bar {
+        body::before {
+            content: '';
             position: fixed;
+            top: 0;
             left: 0;
-            top: 0;
-            width: 5px;
+            width: 100%;
             height: 100%;
-            background: linear-gradient(180deg, #8b7aa8 0%, #c9a5a5 100%);
-            z-index: 100;
+            background-image: radial-gradient(circle at 20% 80%, rgba(212, 197, 232, 0.1) 0%, transparent 50%),
+                              radial-gradient(circle at 80% 20%, rgba(180, 165, 199, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: white;
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
-            display: grid;
-            grid-template-columns: 280px 1fr;
-            min-height: 100vh;
-        }
-
-        .sidebar {
-            background: #f8f6fa;
-            padding: 60px 30px;
-            border-right: 1px solid #e8e4ed;
-            position: sticky;
+        body::after {
+            content: '';
+            position: fixed;
             top: 0;
-            height: 100vh;
-            overflow-y: auto;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10' cy='10' r='2' fill='%23d4c5e8' opacity='0.3'/%3E%3Ccircle cx='50' cy='30' r='2' fill='%23b4a5c7' opacity='0.25'/%3E%3Ccircle cx='80' cy='60' r='2' fill='%23d4c5e8' opacity='0.3'/%3E%3Cline x1='10' y1='10' x2='50' y2='30' stroke='%23d4c5e8' stroke-width='0.5' opacity='0.2'/%3E%3Cline x1='50' y1='30' x2='80' y2='60' stroke='%23b4a5c7' stroke-width='0.5' opacity='0.2'/%3E%3C/svg%3E");
+            background-size: 400px 400px;
+            opacity: 0.4;
+            pointer-events: none;
+            z-index: 0;
         }
 
-        .sidebar-content {
-            opacity: 0;
-            animation: fadeIn 0.8s ease forwards;
+        .hero {
+            background: linear-gradient(135deg, #d4c5e8 0%, #c4b5d8 100%);
+            color: #6b5d7a;
+            padding: 80px 40px 60px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 20px rgba(180, 165, 199, 0.15);
+            overflow: visible;
         }
 
-        .profile-icon {
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 500px;
+            background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 30px;
+            left: 15%;
+            width: 70px;
+            height: 70px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='10' fill='%236b5d7a' opacity='0.4'/%3E%3Cline x1='50' y1='40' x2='35' y2='20' stroke='%236b5d7a' stroke-width='3' opacity='0.5'/%3E%3Cline x1='50' y1='40' x2='65' y2='20' stroke='%236b5d7a' stroke-width='3' opacity='0.5'/%3E%3Cline x1='50' y1='60' x2='35' y2='80' stroke='%236b5d7a' stroke-width='3' opacity='0.5'/%3E%3Ccircle cx='35' cy='20' r='5' fill='%236b5d7a' opacity='0.5'/%3E%3Ccircle cx='65' cy='20' r='5' fill='%236b5d7a' opacity='0.5'/%3E%3Ccircle cx='35' cy='80' r='5' fill='%236b5d7a' opacity='0.5'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .hero-neurons-right {
+            position: absolute;
+            top: 40px;
+            right: 15%;
+            width: 65px;
+            height: 65px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='12' fill='none' stroke='%236b5d7a' stroke-width='3' opacity='0.6'/%3E%3Cline x1='50' y1='38' x2='50' y2='15' stroke='%236b5d7a' stroke-width='3' opacity='0.5'/%3E%3Cline x1='50' y1='62' x2='35' y2='85' stroke='%236b5d7a' stroke-width='3' opacity='0.5'/%3E%3Cline x1='50' y1='62' x2='65' y2='85' stroke='%236b5d7a' stroke-width='3' opacity='0.5'/%3E%3Ccircle cx='50' cy='15' r='6' fill='%236b5d7a' opacity='0.6'/%3E%3Ccircle cx='35' cy='85' r='6' fill='%236b5d7a' opacity='0.6'/%3E%3Ccircle cx='65' cy='85' r='6' fill='%236b5d7a' opacity='0.6'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            pointer-events: none;
+        }
+
+        .hero-neurons-bottom-left {
+            position: absolute;
+            bottom: 30px;
+            left: 20%;
+            width: 60px;
+            height: 60px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='9' fill='%236b5d7a' opacity='0.5'/%3E%3Cline x1='50' y1='41' x2='35' y2='20' stroke='%236b5d7a' stroke-width='2.5' opacity='0.5'/%3E%3Cline x1='50' y1='41' x2='65' y2='20' stroke='%236b5d7a' stroke-width='2.5' opacity='0.5'/%3E%3Ccircle cx='35' cy='20' r='5' fill='%236b5d7a' opacity='0.5'/%3E%3Ccircle cx='65' cy='20' r='5' fill='%236b5d7a' opacity='0.5'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            pointer-events: none;
+        }
+
+        .hero-neurons-bottom-right {
+            position: absolute;
+            bottom: 35px;
+            right: 20%;
+            width: 55px;
+            height: 55px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='8' fill='%236b5d7a' opacity='0.45'/%3E%3Cline x1='50' y1='42' x2='50' y2='20' stroke='%236b5d7a' stroke-width='2.5' opacity='0.45'/%3E%3Cline x1='42' y1='50' x2='20' y2='50' stroke='%236b5d7a' stroke-width='2.5' opacity='0.45'/%3E%3Ccircle cx='50' cy='20' r='5' fill='%236b5d7a' opacity='0.45'/%3E%3Ccircle cx='20' cy='50' r='5' fill='%236b5d7a' opacity='0.45'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            pointer-events: none;
+        }
+
+        .hero-icon {
             width: 80px;
             height: 80px;
-            background: linear-gradient(135deg, #8b7aa8 0%, #c9a5a5 100%);
-            border-radius: 50%;
             margin: 0 auto 25px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5em;
-            color: white;
-        }
-
-        .sidebar h3 {
-            font-family: Georgia, serif;
-            font-size: 1.3em;
-            margin-bottom: 8px;
-            color: #2c3e50;
-            text-align: center;
-        }
-
-        .sidebar .location {
-            text-align: center;
-            color: #666;
-            font-size: 0.95em;
-            margin-bottom: 30px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #e0d4ed;
-        }
-
-        .quick-facts {
-            margin-top: 20px;
-        }
-
-        .quick-facts h4 {
-            font-size: 0.85em;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: #8b7aa8;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-
-        .fact-item {
-            margin-bottom: 20px;
-            padding: 15px;
-            background: white;
-            border-radius: 8px;
-            border-left: 3px solid #c9a5a5;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .fact-item:hover {
-            transform: translateX(5px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        }
-
-        .fact-label {
-            font-size: 0.8em;
-            color: #8b7aa8;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-        }
-
-        .fact-value {
-            font-size: 0.95em;
-            color: #555;
-        }
-
-        .main-content {
-            padding: 60px 50px;
-        }
-
-        .header {
-            margin-bottom: 60px;
-            opacity: 0;
-            animation: fadeInUp 0.8s ease 0.2s forwards;
-        }
-
-        .header-decoration {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-
-        .header-decoration::before,
-        .header-decoration::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, #e0d4ed, transparent);
-        }
-
-        .header-icon {
-            font-size: 1.5em;
-            color: #c9a5a5;
-        }
-
-        .header h1 {
-            font-family: Georgia, serif;
-            font-size: 3em;
-            margin-bottom: 15px;
-            color: #2c3e50;
-        }
-
-        .header .tagline {
-            font-size: 1.2em;
-            color: #666;
-            font-style: italic;
-        }
-
-        .section {
-            margin-bottom: 60px;
-            opacity: 0;
-            animation: fadeInUp 0.8s ease forwards;
-        }
-
-        .section:nth-child(2) { animation-delay: 0.3s; }
-        .section:nth-child(3) { animation-delay: 0.4s; }
-        .section:nth-child(4) { animation-delay: 0.5s; }
-
-        .section-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 25px;
-            cursor: pointer;
-            user-select: none;
-        }
-
-        .section-icon {
-            font-size: 1.8em;
-            color: #8b7aa8;
-        }
-
-        .section-title {
-            font-family: Georgia, serif;
-            font-size: 1.8em;
-            color: #2c3e50;
-            flex: 1;
-        }
-
-        .expand-icon {
-            font-size: 1.2em;
-            color: #8b7aa8;
-            transition: transform 0.3s ease;
-        }
-
-        .section.collapsed .expand-icon {
-            transform: rotate(-90deg);
-        }
-
-        .section-content {
-            font-size: 1.05em;
-            color: #555;
-            line-height: 1.9;
-            max-height: 2000px;
-            overflow: hidden;
-            transition: max-height 0.5s ease, opacity 0.5s ease;
-        }
-
-        .section.collapsed .section-content {
-            max-height: 0;
-            opacity: 0;
-        }
-
-        .story-card {
-            background: linear-gradient(135deg, #f8f6fa 0%, #faf8fb 100%);
-            padding: 35px;
-            border-radius: 12px;
-            border-left: 4px solid #8b7aa8;
-            margin-top: 15px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .story-card::before {
-            content: '"';
-            position: absolute;
-            top: 10px;
-            left: 15px;
-            font-size: 4em;
-            color: #e0d4ed;
-            font-family: Georgia, serif;
-        }
-
-        .story-card p {
-            margin: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='18' fill='%236b5d7a' opacity='0.3'/%3E%3Ccircle cx='50' cy='50' r='12' fill='none' stroke='%236b5d7a' stroke-width='3' opacity='0.7'/%3E%3Cline x1='50' y1='38' x2='50' y2='20' stroke='%236b5d7a' stroke-width='3' opacity='0.7'/%3E%3Cline x1='50' y1='62' x2='50' y2='80' stroke='%236b5d7a' stroke-width='3' opacity='0.7'/%3E%3Cline x1='38' y1='50' x2='20' y2='50' stroke='%236b5d7a' stroke-width='3' opacity='0.7'/%3E%3Cline x1='62' y1='50' x2='80' y2='50' stroke='%236b5d7a' stroke-width='3' opacity='0.7'/%3E%3Ccircle cx='50' cy='20' r='7' fill='%236b5d7a' opacity='0.7'/%3E%3Ccircle cx='50' cy='80' r='7' fill='%236b5d7a' opacity='0.7'/%3E%3Ccircle cx='20' cy='50' r='7' fill='%236b5d7a' opacity='0.7'/%3E%3Ccircle cx='80' cy='50' r='7' fill='%236b5d7a' opacity='0.7'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
             position: relative;
             z-index: 1;
         }
 
-        .pull-quote {
-            font-family: Georgia, serif;
-            font-size: 1.15em;
-            color: #8b7aa8;
-            font-style: italic;
-            padding: 20px 0;
-            margin: 25px 0;
-            border-top: 2px solid #e0d4ed;
-            border-bottom: 2px solid #e0d4ed;
-            text-align: center;
+        .hero h1 {
+            font-family: 'Georgia', serif;
+            font-size: 3.5em;
+            font-weight: 300;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+            position: relative;
+            display: inline-block;
+            z-index: 1;
         }
 
-        .two-column {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
+        .hero h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #9b8ab3, transparent);
+        }
+
+        .hero .subtitle {
+            font-size: 1em;
+            font-weight: 400;
+            opacity: 0.85;
             margin-top: 20px;
+            letter-spacing: 0.5px;
+            z-index: 1;
+            position: relative;
+            line-height: 1.6;
         }
 
-        .column-card {
-            background: white;
-            padding: 25px;
+        .location {
+            font-size: 0.85em;
+            margin-top: 8px;
+            opacity: 0.75;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            z-index: 1;
+            position: relative;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 100px 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section {
+            margin-bottom: 100px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+            position: relative;
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(180deg, transparent, #e0d4f0 20%, #e0d4f0 80%, transparent);
             border-radius: 10px;
-            border: 1px solid #e8e4ed;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .column-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        .section::after {
+            content: '';
+            position: absolute;
+            left: -26px;
+            top: 30px;
+            width: 14px;
+            height: 14px;
+            background: radial-gradient(circle, #d4c5e8 0%, #b4a5c7 100%);
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(180, 165, 199, 0.4);
         }
 
-        .column-card h4 {
-            font-family: Georgia, serif;
-            font-size: 1.2em;
-            color: #2c3e50;
-            margin-bottom: 12px;
+        .section:nth-child(1) { animation-delay: 0.1s; }
+        .section:nth-child(2) { animation-delay: 0.2s; }
+        .section:nth-child(3) { animation-delay: 0.3s; }
+
+        .section-label {
+            font-size: 0.75em;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #b4a5c7;
+            font-weight: 600;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
-        .column-icon {
-            font-size: 1.3em;
+        .section-label::before {
+            content: '';
+            width: 16px;
+            height: 16px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='15' fill='%23d4c5e8'/%3E%3Cline x1='50' y1='35' x2='50' y2='10' stroke='%23b4a5c7' stroke-width='4'/%3E%3Cline x1='50' y1='65' x2='50' y2='90' stroke='%23b4a5c7' stroke-width='4'/%3E%3Cline x1='35' y1='50' x2='10' y2='50' stroke='%23b4a5c7' stroke-width='4'/%3E%3Ccircle cx='50' cy='10' r='6' fill='%23b4a5c7'/%3E%3Ccircle cx='50' cy='90' r='6' fill='%23b4a5c7'/%3E%3Ccircle cx='10' cy='50' r='6' fill='%23b4a5c7'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            flex-shrink: 0;
+        }
+
+        .section-title {
+            font-family: 'Georgia', serif;
+            font-size: 2.2em;
+            font-weight: 300;
+            color: #8b7a9e;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        .section-content {
+            font-size: 1.05em;
+            line-height: 2;
+            color: #7a6d8c;
+        }
+
+        .section-content p {
+            margin-bottom: 25px;
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .col-box {
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(180, 165, 199, 0.2);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(180, 165, 199, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .col-box::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 30px;
+            height: 30px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='12' fill='none' stroke='%23d4c5e8' stroke-width='2.5' opacity='0.5'/%3E%3Cline x1='50' y1='38' x2='50' y2='20' stroke='%23d4c5e8' stroke-width='2' opacity='0.4'/%3E%3Cline x1='50' y1='62' x2='40' y2='80' stroke='%23d4c5e8' stroke-width='2' opacity='0.4'/%3E%3Cline x1='50' y1='62' x2='60' y2='80' stroke='%23d4c5e8' stroke-width='2' opacity='0.4'/%3E%3Ccircle cx='50' cy='20' r='5' fill='%23d4c5e8' opacity='0.5'/%3E%3Ccircle cx='40' cy='80' r='4' fill='%23d4c5e8' opacity='0.4'/%3E%3Ccircle cx='60' cy='80' r='4' fill='%23d4c5e8' opacity='0.4'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .col-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(180, 165, 199, 0.2);
+            border-color: rgba(180, 165, 199, 0.4);
+        }
+
+        .col-box h4 {
+            font-family: 'Georgia', serif;
+            font-size: 1.2em;
+            color: #b4a5c7;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+
+        .col-box p {
+            margin: 0;
+            font-size: 1em;
+            line-height: 1.8;
+            color: #7a6d8c;
         }
 
         .tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 25px;
+            gap: 15px;
+            margin-top: 40px;
         }
 
         .tag {
-            background: white;
-            color: #8b7aa8;
-            padding: 10px 18px;
-            border: 2px solid #e0d4ed;
-            border-radius: 25px;
+            color: #b4a5c7;
+            padding: 8px 16px;
             font-size: 0.9em;
-            font-weight: 500;
+            font-weight: 400;
             transition: all 0.3s ease;
-            cursor: pointer;
+            border: 1px solid rgba(180, 165, 199, 0.3);
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(5px);
         }
 
         .tag:hover {
-            background: linear-gradient(135deg, #8b7aa8 0%, #c9a5a5 100%);
-            color: white;
-            border-color: transparent;
+            color: #9b8ab3;
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(139, 122, 168, 0.3);
+            box-shadow: 0 4px 12px rgba(180, 165, 199, 0.2);
+            border-color: rgba(180, 165, 199, 0.5);
+            background: rgba(255, 255, 255, 0.8);
         }
 
-        .divider {
+        footer {
             text-align: center;
-            margin: 50px 0;
+            padding: 60px 20px;
+            color: #c4b5d8;
+            font-size: 0.9em;
             position: relative;
         }
 
-        .divider::before {
+        footer::before {
             content: '';
             position: absolute;
-            left: 0;
-            top: 50%;
-            width: 100%;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
             height: 1px;
-            background: linear-gradient(90deg, transparent, #e0d4ed, transparent);
-        }
-
-        .divider-icon {
-            position: relative;
-            background: white;
-            padding: 0 20px;
-            font-size: 1.2em;
-            background: linear-gradient(90deg, #8b7aa8, #c9a5a5, #8b7aa8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+            background: linear-gradient(90deg, transparent, #e0d4f0, transparent);
         }
 
         @keyframes fadeInUp {
@@ -369,122 +364,131 @@
             }
         }
 
-        @media (max-width: 900px) {
+        @media (max-width: 768px) {
+            body::after {
+                display: none;
+            }
+
+            .hero::before,
+            .hero::after {
+                display: none;
+            }
+
+            .hero::after,
+            .hero-neurons-right,
+            .hero-neurons-bottom-left,
+            .hero-neurons-bottom-right {
+                display: none;
+            }
+
+            .hero {
+                padding: 60px 20px 50px;
+            }
+
+            .hero-icon {
+                width: 50px;
+                height: 50px;
+                margin-bottom: 20px;
+            }
+
+            .hero h1 {
+                font-size: 2.5em;
+            }
+
+            .hero .subtitle {
+                font-size: 0.9em;
+            }
+
             .container {
+                padding: 60px 20px;
+            }
+
+            .section {
+                margin-bottom: 80px;
+            }
+
+            .section::before,
+            .section::after {
+                display: none;
+            }
+
+            .section-title {
+                font-size: 1.8em;
+            }
+
+            .two-col {
                 grid-template-columns: 1fr;
+                gap: 20px;
             }
 
-            .sidebar {
-                position: relative;
-                height: auto;
-                padding: 40px 20px;
-            }
-
-            .main-content {
-                padding: 40px 20px;
-            }
-
-            .header h1 {
-                font-size: 2.2em;
-            }
-
-            .two-column {
-                grid-template-columns: 1fr;
-            }
-
-            .accent-bar {
+            .col-box::before {
                 display: none;
             }
         }
     </style>
 </head>
 <body>
-    <div class="accent-bar"></div>
-    
-    <div class="container">
-        <aside class="sidebar">
-            <div class="sidebar-content">
-                <div class="profile-icon">MK</div>
-                <p class="location">Springfield, VA</p>
-            </div>
-        </aside>
-
-        <main class="main-content">
-            <header class="header">
-                <div class="header-decoration">
-                    <span class="header-icon">✦</span>
-                </div>
-                <h1>Maddie Kwarteng</h1>
-                <p class="tagline">Medical Student | Future Psychiatrist | Advocate for Mental Health</p>
-            </header>
-
-            <section class="section">
-                <div class="section-header" onclick="toggleSection(this)">
-                    <h2 class="section-title">A Defining Moment</h2>
-                    <span class="expand-icon">▼</span>
-                </div>
-                <div class="section-content">
-                    <div class="story-card">
-                        <p>During med school, I worked with a psychiatric patient from Afghanistan who had PTSD after witnessing the Taliban shoot pets. His trauma was deeply tied to animals, and he associated them with loss and fear. I connected him with animal shelter resources and volunteer opportunities, hoping it might help him start to rebuild a healthier relationship with animals. Even though I didn't get to see how things turned out (it was inpatient, so our time was limited), that experience showed me how important it is in psychiatry to look beyond symptoms and get creative with care that addresses what really matters to each person.</p>
-                    </div>
-                </div>
-            </section>
-
-            <div class="divider">
-                <span class="divider-icon">◆ ◆ ◆</span>
-            </div>
-
-            <section class="section">
-                <div class="section-header" onclick="toggleSection(this)">
-                    <h2 class="section-title">My Path Forward</h2>
-                    <span class="expand-icon">▼</span>
-                </div>
-                <div class="section-content">
-                    <p style="margin-bottom: 25px;">I'm going into psychiatry because it's challenging but so rewarding. I love helping people work through tough moments in their lives and showing them there's hope on the other side.</p>
-
-                    <div class="two-column">
-                        <div class="column-card">
-                            <h4>The Brain</h4>
-                            <p>The brain is just endlessly fascinating to me: how it works, what shapes our thoughts and emotions, all of it.</p>
-                        </div>
-
-                        <div class="column-card">
-                            <h4>The Need</h4>
-                            <p>We need way more mental health providers. Everyone deserves access to good psychiatric care, and I want to help make that happen.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <div class="divider">
-                <span class="divider-icon">◆ ◆ ◆</span>
-            </div>
-
-            <section class="section">
-                <div class="section-header" onclick="toggleSection(this)">
-                    <h2 class="section-title">Beyond Medicine</h2>
-                    <span class="expand-icon">▼</span>
-                </div>
-                <div class="section-content">
-                    <p>When I'm not studying medicine, I love learning languages. There's something cool about connecting with people from different cultures. I've also been mentoring underserved students through the college application process since undergrad, which has been really meaningful to me. In my downtime, I'm really into cross stitching (it's weirdly meditative), baking things for friends and family, and hanging out with my fiancé.</p>
-
-                    <div class="tags">
-                        <span class="tag">Languages</span>
-                        <span class="tag">Mentoring</span>
-                        <span class="tag">Cross Stitching</span>
-                        <span class="tag">Baking</span>
-                        <span class="tag">Quality Time</span>
-                    </div>
-                </div>
-            </section>
-        </main>
+    <div class="hero">
+        <div class="hero-neurons-right"></div>
+        <div class="hero-neurons-bottom-left"></div>
+        <div class="hero-neurons-bottom-right"></div>
+        <div class="hero-icon"></div>
+        <h1>Maddie</h1>
+        <p class="location">Springfield, Virginia</p>
+        <p class="subtitle">Medical Student | Future Psychiatrist | Advocate for Mental Health</p>
     </div>
 
-    <script>
-        function toggleSection(header) {
-            const section = header.parentElement;
-            section.classList.toggle('collapsed');
-        }
-    </script>
+    <div class="container">
+        <section class="section">
+            <div class="section-label">A Defining Moment</div>
+            <h2 class="section-title">Patient-Centered Care</h2>
+            <div class="section-content">
+                <p>During med school, I worked with a psychiatric patient from Afghanistan who had PTSD after witnessing the Taliban shoot pets. His trauma was deeply tied to animals, and he associated them with loss and fear. I connected him with animal shelter resources and volunteer opportunities, hoping it might help him start to rebuild a healthier relationship with animals.</p>
+                <p>Even though I didn't get to see how things turned out (it was inpatient, so our time was limited), that experience showed me how important it is in psychiatry to look beyond symptoms and get creative with care that addresses what really matters to each person.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-label">Specialty</div>
+            <h2 class="section-title">Psychiatry</h2>
+            <div class="section-content">
+                <p>I'm going into psychiatry because it's challenging but so rewarding. I love helping people work through tough moments in their lives and showing them there's hope on the other side.</p>
+                
+                <div class="two-col">
+                    <div class="col-box">
+                        <h4>The Brain</h4>
+                        <p>The brain is just endlessly fascinating to me: how it works, what shapes our thoughts and emotions, all of it.</p>
+                    </div>
+                    <div class="col-box">
+                        <h4>The Need</h4>
+                        <p>We need way more mental health providers. Everyone deserves access to good psychiatric care, and I want to help make that happen.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-label">Beyond Medicine</div>
+            <h2 class="section-title">What Matters to Me</h2>
+            <div class="section-content">
+                <p>Public health is a huge passion of mine. I had the incredible opportunity to pursue my Master of Public Health in Australia, which gave me a global perspective on health systems and the social determinants that shape mental wellbeing. That experience deepened my commitment to addressing mental health not just at the individual level, but at the community and systems level too.</p>
+                
+                <p>When I'm not studying medicine, I love learning languages. There's something cool about connecting with people from different cultures. I've also been mentoring underserved students through the college application process since undergrad, which has been really meaningful to me. In my downtime, I'm really into cross stitching (it's weirdly meditative), baking things for friends and family, and hanging out with my fiancé.</p>
+
+                <div class="tags">
+                    <span class="tag">Public Health</span>
+                    <span class="tag">Languages</span>
+                    <span class="tag">Mentoring</span>
+                    <span class="tag">Cross Stitching</span>
+                    <span class="tag">Baking</span>
+                    <span class="tag">Quality Time</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        © 2026 Maddie
+    </footer>
 </body>
 </html>
